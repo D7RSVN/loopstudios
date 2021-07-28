@@ -36,18 +36,21 @@ const app = (() => {
   init();
 })();
 
-// $(document).ready(function(){       
-//   var scroll_start = 0;
-//   var startchange = $('#profile');
-//   var offset = startchange.offset();
-//   if (startchange.length){
-//       $(document).scroll(function() { 
-//           scroll_start = $(this).scrollTop();
-//           if(scroll_start > offset.top) {
-//               $("nav").css('background-color', 'rgb(0,0,0, 0.5)');
-//           } else {
-//               $('nav').css('background-color', 'transparent');
-//           }
-//       });
-//   }
-// });
+$(document).ready(function(){       
+  var scroll_start = 0;
+  var startchange = $('#profile');
+  var offset = startchange.offset();
+  var windowWidth = window.innerWidth;
+  if (windowWidth < 768){
+    if (startchange.length){
+        $(document).scroll(function() { 
+            scroll_start = $(this).scrollTop();
+            if(scroll_start > offset.top) {
+                $("nav").css('background-color', 'rgb(0,0,0, 0.5)');
+            } else {
+                $('nav').css('background-color', 'transparent');
+            }
+        });
+    }
+  }
+});
