@@ -37,7 +37,7 @@ body {
     justify-content: space-between;
     box-sizing: border-box;
     transition: background-color 0.5s; 
-
+    z-index: 2;
 }
   
   .site-content {
@@ -58,11 +58,11 @@ body {
   .menu-icon {
     height: 15px;
     width: 25px;
-    z-index: 2;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 3;
 }
 body.nav-active .menu-icon .bar:nth-child(2) {
     opacity: 0;
@@ -226,10 +226,10 @@ h1 {
 }
 
 .logo {
-  z-index: 2;
   display: block;
   width: 44%;
   height: fit-content;
+  z-index: 3;
 }
 
 img{
@@ -318,7 +318,7 @@ grid-area: b;
   .item {
     position: relative;
     color: $primarycolor;
-    z-index: -1;
+    z-index: 1;
     h3 {
       position: absolute;
       font-family: 'Josefin Sans';

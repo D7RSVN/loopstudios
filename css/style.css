@@ -37,6 +37,7 @@ nav {
           box-sizing: border-box;
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
+  z-index: 2;
 }
 
 .site-content {
@@ -64,7 +65,6 @@ nav {
 .menu-icon {
   height: 15px;
   width: 25px;
-  z-index: 2;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,6 +76,7 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  z-index: 3;
 }
 
 body.nav-active .menu-icon .bar:nth-child(2) {
@@ -311,12 +312,12 @@ h1 {
 }
 
 .logo {
-  z-index: 2;
   display: block;
   width: 44%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  z-index: 3;
 }
 
 img {
@@ -377,16 +378,7 @@ h2 {
   display: grid;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
-      grid-template-areas: 'a'
- '.'
- '.'
- '.'
- '.'
- '.'
- '.'
- '.'
- '.'
- 'b';
+      grid-template-areas: 'a' '.' '.' '.' '.' '.' '.' '.' '.' 'b';
   padding: 0 6.5%;
   grid-gap: 6.3vw;
 }
@@ -417,7 +409,7 @@ h2 {
 #creations .item {
   position: relative;
   color: white;
-  z-index: -1;
+  z-index: 1;
 }
 
 #creations .item h3 {
@@ -558,7 +550,7 @@ footer .link--dia:hover::after {
 
 @media screen and (min-width: 768px) {
   nav {
-    height: calc(8vw + 45px);
+    height: 160px;
     position: absolute;
     padding: 0 11.5%;
     -webkit-box-align: center;
@@ -666,13 +658,13 @@ footer .link--dia:hover::after {
     background-size: cover;
   }
   header .tagline {
-    font-size: calc(2.5vw + 0px);
+    font-size: calc(2vw + 7px);
     padding: 3.5%;
     margin-top: 80px;
-    height: calc(19vw + 5px);
+    height: calc(10vw + 135px);
     width: 58.5%;
     word-spacing: 0;
-    padding-top: calc(3vw + 10px);
+    padding-top: calc(2vw + 24px);
   }
   #profile {
     padding: 11.2% 11.4%;
